@@ -44,7 +44,7 @@ These are results recorded in the notebook, not scores from running this cleaned
 
 - `legal_text_classifier.py` - training and sample-prediction pipeline.
 - `requirements.txt` - Python dependencies.
-- `Legal_Text_Classification_Writeup.pdf` - two-page project summary (to be added after the repository setup step).
+- [Legal_Text_Classification_Writeup.pdf](Legal_Text_Classification_Writeup.pdf) - two-page project summary.
 
 ## Limitations
 
