@@ -41,7 +41,7 @@ def train_all_models():
         labels.append(int(label))
 
     X_train, X_test, y_train, y_test = train_test_split(
-        texts, labels, test_size=0.20, random_state=42, stratify=labels if min(np.bincount(labels)) >= 2 else None
+        texts, labels, test_size=0.20, random_state=42, stratify=labels if min(np.unique(labels, return_counts=True)[1]) >= 2 else None
     )
     vectorizer = TfidfVectorizer(max_features=5000, stop_words="english")
     train_tfidf = vectorizer.fit_transform(X_train)
