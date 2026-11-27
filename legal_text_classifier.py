@@ -63,7 +63,7 @@ def show_report(name: str, y_true: list[int], y_pred: np.ndarray) -> None:
 def main() -> None:
     texts, labels = load_records()
     X_train_text, X_test_text, y_train, y_test = train_test_split(
-        texts, labels, test_size=0.20, random_state=42, stratify=labels if min(np.bincount(labels)) >= 2 else None
+        texts, labels, test_size=0.20, random_state=42, stratify=labels if min(np.unique(labels, return_counts=True)[1]) >= 2 else None
     )
 
     # Learn TF-IDF vocabulary and IDF weights from training documents only.
