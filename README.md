@@ -1,7 +1,7 @@
 # Legal Text Classification of U.S. Supreme Court Decisions
 
 **Project notebook:** [Open the Google Colab notebook](https://colab.research.google.com/drive/1kMIXdcPJss8ldhaBDRFet0y5kCRAfdFr?usp=sharing)  
-**Team work division:** [TEAM.md](TEAM.md)
+**Team work division:** [TEAM.md](TEAM.md)\n\n**Modular implementation:** see the `src/` modules on the team branches. Saifulla owns preprocessing and TF-IDF/LDA models (`member1-tfidf-lda`); the teammate owns Doc2Vec, evaluation, and prediction (`member2-doc2vec`). Both branches are intended to be reviewed and merged into `main`.
 
 
 This project classifies U.S. Supreme Court decision text into its high-level legal issue area. The supplied Colab notebook compared TF-IDF + LDA + Logistic Regression, class-weighted Logistic Regression, and Doc2Vec + Logistic Regression.
