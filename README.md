@@ -1,5 +1,9 @@
 # Legal Text Classification of U.S. Supreme Court Decisions
 
+**Project notebook:** [Open the Google Colab notebook](https://colab.research.google.com/drive/1kMIXdcPJss8ldhaBDRFet0y5kCRAfdFr?usp=sharing)  
+**Team work division:** [TEAM.md](TEAM.md)
+
+
 This project classifies U.S. Supreme Court decision text into its high-level legal issue area. The supplied Colab notebook compared TF-IDF + LDA + Logistic Regression, class-weighted Logistic Regression, and Doc2Vec + Logistic Regression.
 
 ## Dataset
