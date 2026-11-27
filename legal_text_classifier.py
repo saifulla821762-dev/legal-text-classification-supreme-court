@@ -9,7 +9,7 @@ from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
 from textacy.datasets import SupremeCourt
 
@@ -55,7 +55,7 @@ def show_report(name: str, y_true: list[int], y_pred: np.ndarray) -> None:
     """Print computed accuracy and per-class scores."""
     print(f"\n{name}\n{'=' * len(name)}")
     print(f"Accuracy: {accuracy_score(y_true, y_pred):.4f}")
-    print(classification_report(y_true, y_pred, zero_division=0))
+    print(classification_report(y_true, y_pred, zero_division=0))\n    print("Confusion matrix:")\n    print(confusion_matrix(y_true, y_pred))
 
 
 def main() -> None:
