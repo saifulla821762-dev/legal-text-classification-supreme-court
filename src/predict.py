@@ -1,7 +1,7 @@
 """Prediction helpers and Supreme Court issue-area display labels."""
 from __future__ import annotations
 
-from .preprocessing import clean_text
+import re\n\ndef clean_text(text: str) -> str:\n    text = text.lower()\n    text = re.sub(r"\\s+", " ", text)\n    text = re.sub(r"[^a-zA-Z0-9\\s]", "", text)\n    return text.strip()
 
 ISSUE_AREA_NAMES = {
     1: "Criminal Procedure", 2: "Civil Rights", 3: "First Amendment",
