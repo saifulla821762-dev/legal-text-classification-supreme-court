@@ -1,50 +1,49 @@
 # ML Team — Legal Text Classification
 
-## Member 1 — Saifulla: Dataset, Preprocessing & TF-IDF/LDA Models
-**Branch:** `member1-data-tfidf`
+## Member 1 — Saifulla: Dataset, Preprocessing & TF-IDF/LDA
+**Branch:** `member1-tfidf-lda`
 
-- Load the Supreme Court dataset and verify record counts, labels, missing values, and class distribution.
-- Implement and document text cleaning and train/test split.
-- Build TF-IDF features (fit on training data only).
+- Load the Supreme Court dataset; inspect record counts, missing labels, and class distribution.
+- Clean text and prepare labels; establish the shared reproducible train/test split.
+- Implement TF-IDF feature extraction (fit on training text only).
 - Implement LDA + Logistic Regression baseline.
 - Implement class-weighted Logistic Regression variant.
-- Evaluate both models with accuracy, precision, recall, weighted F1, and confusion matrix.
-- Maintain the dataset/preprocessing/methodology sections of the report and README.
-- Commit work to the assigned branch and open a pull request.
+- Report model metrics and document preprocessing/methodology.
+- Commit work to this branch and open a pull request.
 
-**Deliverables:** reproducible preprocessing, two TF-IDF/LDA models, their evaluation outputs, and methodology notes.
+**Deliverables:** dataset/preprocessing module, TF-IDF/LDA model module, two baseline models, and methodology notes.
 
 ## Member 2 — Teammate: Doc2Vec, Evaluation & Demo
-**Branch:** `member2-doc2vec-evaluation`
+**Branch:** `member2-doc2vec`
 
-- Implement Doc2Vec training using training documents only; infer vectors for test documents.
-- Train Logistic Regression on Doc2Vec embeddings.
-- Evaluate Doc2Vec with accuracy, precision, recall, weighted F1, and confusion matrix.
-- Compare Doc2Vec results against Member 1's models using the same split and metrics.
-- Maintain/validate the Streamlit demo (`app.py`) for model selection and pasted-text prediction.
-- Maintain results/comparison/demo sections of the report and README.
-- Commit work to the assigned branch and open a pull request.
+- Implement Doc2Vec embeddings trained on training documents only; infer vectors for test text.
+- Train Logistic Regression on Doc2Vec vectors.
+- Evaluate with accuracy, precision, recall, weighted F1, and confusion matrix.
+- Compare all models using the same split and metrics.
+- Implement prediction/demo module and maintain the Streamlit demo.
+- Commit work to this branch and open a pull request.
 
-**Deliverables:** leakage-aware Doc2Vec model, comparison results, and a tested prediction demo.
+**Deliverables:** Doc2Vec model module, evaluation/comparison module, prediction/demo, and results.
 
 ## Shared — Integration & Review
-- Use the same dataset filtering, cleaned text, labels, random seed, and train/test split across all models.
-- Check for data leakage; fit every representation/model using training data only.
-- Review one another's pull requests; resolve conflicts together.
-- Run the complete pipeline and demo before the review.
-- Finalize README, requirements, two-page report, presentation, and viva preparation.
-- Clearly distinguish notebook-recorded scores from scores produced by the cleaned implementation.
+- Use the same dataset filtering, cleaned text, labels, random seed, and train/test split for fair comparison.
+- Fit all representations and models using training data only; avoid data leakage.
+- Review each other's pull requests and resolve conflicts together.
+- Run the full pipeline and demo before review.
+- Finalize README, requirements, report, presentation, and viva preparation.
+- Distinguish notebook-recorded scores from results obtained by the cleaned implementation.
 
-## Git Workflow
+## Git workflow
 1. Work only on your assigned branch.
-2. Commit small, descriptive changes (for example, `feat: add TF-IDF baseline` or `feat: train Doc2Vec model`).
-3. Push the branch and open a pull request into `main`.
-4. The other member reviews; merge after testing.
+2. Make small, descriptive commits.
+3. Push branch and open a pull request into `main`.
+4. Review the other member's PR; merge only after testing.
 5. Do not commit downloaded datasets, model binaries, secrets, or large generated files.
 
-## Current Repository Files
-- `legal_text_classifier.py` — training pipeline
-- `app.py` — Streamlit demo
-- `requirements.txt` — dependencies
-- `README.md` — setup, run, and recorded notebook results
-- `Legal_Text_Classification_Writeup.pdf` — project write-up
+## Current files
+- `legal_text_classifier.py` — existing training pipeline (legacy entry point).
+- `app.py` — Streamlit demo.
+- `requirements.txt` — dependencies.
+- `README.md` — setup, run, and notebook results.
+- `Legal_Text_Classification_Writeup.pdf` — project write-up.
+- `src/` — new modular model implementation (team branches).
