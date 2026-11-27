@@ -55,7 +55,9 @@ def show_report(name: str, y_true: list[int], y_pred: np.ndarray) -> None:
     """Print computed accuracy and per-class scores."""
     print(f"\n{name}\n{'=' * len(name)}")
     print(f"Accuracy: {accuracy_score(y_true, y_pred):.4f}")
-    print(classification_report(y_true, y_pred, zero_division=0))\n    print("Confusion matrix:")\n    print(confusion_matrix(y_true, y_pred))
+    print(classification_report(y_true, y_pred, zero_division=0))
+    print("Confusion matrix:")
+    print(confusion_matrix(y_true, y_pred))
 
 
 def main() -> None:
